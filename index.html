@@ -28,6 +28,57 @@
     </style>
   </head>
   <body class="geist">
-    
+    <header class="container mx-auto">
+      <div
+        class="border border-gray-200 w-90 rounded-md mx-auto m-5 bg-white shadow-md shadow-gray-300 p-10"
+      >
+        <img src="./assets/github-logo.png" alt="" class="mx-auto" />
+        <h2 class="text-xl font-bold text-center my-2">
+          GitHub Issues Tracker
+        </h2>
+        <p class="text-[#64748B] text-[14px] text-center">
+          Sign in to manage your issues
+        </p>
+        <div>
+          <fieldset class="fieldset mt-4">
+            <legend class="fieldset-legend font-extrabold">Username</legend>
+            <input
+              type="text"
+              class="input outline-none rounded-xl"
+              placeholder="Enter Username"
+            />
+            <p class="text-[#4A00FF] text-xsm">Default: admin</p>
+            <legend class="fieldset-legend font-extrabold">Password</legend>
+            <input
+              type="password"
+              class="input outline-none rounded-xl"
+              placeholder="Enter Password"
+            />
+            <p class="text-[#4A00FF] text-xsm">Default: admin123</p>
+          </fieldset>
+          <button class="btn btn-primary w-full rounded-xl my-5">
+            Sign In
+          </button>
+          <div class="flex items-center text-center">
+            <hr class="flex-1 border-t border-[#ccc]" />
+            <span style="margin: 0 10px; color: #555">OR</span>
+            <hr class="flex-1 border-t border-[#ccc]" />
+          </div>
+          <p class="text-[#64748B] text-center text-[12px]">
+            Demo Credentials:
+          </p>
+          <div class="bg-[#eff3f7] py-5 px-15 rounded-md">
+            <h2 class="flex pl-2">
+              <p class="font-semibold">Username:</p>
+              admin
+            </h2>
+            <h2 class="flex">
+              <p class="font-semibold">Password:</p>
+              admin123
+            </h2>
+          </div>
+        </div>
+      </div>
+    </header>
   </body>
 </html>
