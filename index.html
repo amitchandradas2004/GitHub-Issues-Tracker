@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>GitHub Issue Tracker</title>
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,7 +30,7 @@
   <body class="geist">
     <header class="container mx-auto">
       <div
-        class="border border-gray-200 w-90 rounded-md mx-auto m-5 bg-white shadow-md shadow-gray-300 p-10"
+        class="border border-gray-200 w-90 rounded-md mx-auto m-5 bg-white shadow-lg shadow-gray-300 p-10"
       >
         <img src="./assets/github-logo.png" alt="" class="mx-auto" />
         <h2 class="text-xl font-bold text-center my-2">
@@ -43,6 +43,7 @@
           <fieldset class="fieldset mt-4">
             <legend class="fieldset-legend font-extrabold">Username</legend>
             <input
+              id="user-input"
               type="text"
               class="input outline-none rounded-xl"
               placeholder="Enter Username"
@@ -50,13 +51,17 @@
             <p class="text-[#4A00FF] text-xsm">Default: admin</p>
             <legend class="fieldset-legend font-extrabold">Password</legend>
             <input
+              id="password-input"
               type="password"
               class="input outline-none rounded-xl"
               placeholder="Enter Password"
             />
             <p class="text-[#4A00FF] text-xsm">Default: admin123</p>
           </fieldset>
-          <button class="btn btn-primary w-full rounded-xl my-5">
+          <button
+            id="sign-in-btn"
+            class="btn btn-primary w-full rounded-xl my-5"
+          >
             Sign In
           </button>
           <div class="flex items-center text-center">
@@ -80,5 +85,6 @@
         </div>
       </div>
     </header>
+    <script src="scripts/login.js"></script>
   </body>
 </html>
