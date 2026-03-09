@@ -1,90 +1,87 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GitHub Issue Tracker</title>
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="./src/output.css" rel="stylesheet" />
+
+    <!-- daisy UI font all  -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Tailwind CSS and Daisy UI -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
       rel="stylesheet"
       type="text/css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <style>
-      .geist {
-        font-family: "Geist", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-      }
-    </style>
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="https://img.icons8.com/3d-fluency/94/github-logo.png"
+    />
+
+    <!-- title -->
+    <title>Assignment 05</title>
   </head>
-  <body class="geist">
-    <header class="container mx-auto">
-      <div
-        class="border border-gray-200 w-90 rounded-md mx-auto m-5 bg-white shadow-lg shadow-gray-300 p-10"
-      >
-        <img src="./assets/github-logo.png" alt="" class="mx-auto" />
-        <h2 class="text-xl font-bold text-center my-2">
-          GitHub Issues Tracker
-        </h2>
-        <p class="text-[#64748B] text-[14px] text-center">
-          Sign in to manage your issues
-        </p>
-        <div>
-          <fieldset class="fieldset mt-4">
-            <legend class="fieldset-legend font-extrabold">Username</legend>
-            <input
-              id="user-input"
-              type="text"
-              class="input outline-none rounded-xl"
-              placeholder="Enter Username"
-            />
-            <p class="text-[#4A00FF] text-xsm">Default: admin</p>
-            <legend class="fieldset-legend font-extrabold">Password</legend>
-            <input
-              id="password-input"
-              type="password"
-              class="input outline-none rounded-xl"
-              placeholder="Enter Password"
-            />
-            <p class="text-[#4A00FF] text-xsm">Default: admin123</p>
-          </fieldset>
-          <button
-            id="sign-in-btn"
-            class="btn btn-primary w-full rounded-xl my-5"
-          >
-            Sign In
-          </button>
-          <div class="flex items-center text-center">
-            <hr class="flex-1 border-t border-[#ccc]" />
-            <span style="margin: 0 10px; color: #555">OR</span>
-            <hr class="flex-1 border-t border-[#ccc]" />
-          </div>
-          <p class="text-[#64748B] text-center text-[12px]">
-            Demo Credentials:
-          </p>
-          <div class="bg-[#eff3f7] py-5 px-15 rounded-md">
-            <h2 class="flex pl-2">
-              <p class="font-semibold">Username:</p>
-              admin
-            </h2>
-            <h2 class="flex">
-              <p class="font-semibold">Password:</p>
-              admin123
-            </h2>
-          </div>
+  <body class="font-Geist">
+    <main
+      class="w-130 h-80vh mx-auto bg-base-200 shadow-xl my-10 card card-body py-10"
+    >
+      <!-- logo and text -->
+      <div class="flex flex-col items-center justify-center">
+        <img src="./assets/github-logo.png" alt="" />
+        <div class="py-5 text-center">
+          <h2 class="text-2xl font-semibold">GitHub Issues Tracker</h2>
+          <p class="text-gray-500 text-[16px]">Sign in to manage your issues</p>
         </div>
       </div>
-    </header>
-    <script src="scripts/login.js"></script>
+
+      <!-- loging -->
+      <div class="card w-full mx-auto max-w-md shrink-0">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-[18px] font-medium text-black"
+              >Username</label
+            >
+            <input
+              id="user-name"
+              type="text"
+              class="input text-[16px] w-full"
+              placeholder="Enter Username"
+            />
+            <p class="text-primary text-[14px]">Default: admin</p>
+            <label class="label text-[18px] font-medium text-black"
+              >Password</label
+            >
+            <input
+              id="password"
+              type="password"
+              class="input text-[16px] w-full"
+              placeholder="Enter Password"
+            />
+            <p class="text-primary text-[14px]">Default: admin123</p>
+            <button id="sing-btn" class="btn btn-primary mt-4">Sign In</button>
+          </fieldset>
+        </div>
+      </div>
+
+      <!-- or -->
+      <div class="space-y-5 text-center">
+        <fieldset class="border-t border-gray-400 text-center px-4 rounded">
+          <legend class="px-2 font-bold">OR</legend>
+        </fieldset>
+
+        <h3>Demo Credentials:</h3>
+        <div>
+          <p class="text-[16px]">
+            <span class="font-semibold">Username:</span> admin
+          </p>
+          <p class="text-[16px]">
+            <span class="font-semibold">Password:</span> admin123
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- script link -->
+    <script src="./script/loging.js"></script>
   </body>
 </html>

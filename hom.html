@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+
+    <!-- daisy UI font all  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="https://img.icons8.com/3d-fluency/94/github-logo.png"
+    />
+
+    <!-- title -->
+    <title>Assignment 05</title>
+  </head>
+  <body class="font-Geist">
+    <nav class="bg-base-300 shadow-sm">
+      <div class="container mx-auto navbar justify-end lg:justify-between">
+        <div class="hidden lg:block">
+          <div class="flex-1 flex items-center">
+            <img src="./assets/github-logo.png" alt="" class="w-5" />
+            <a class="btn btn-ghost text-xl font-semibold"
+              >GitHub Issues Tracker</a
+            >
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <label class="input">
+            <svg
+              class="h-[1em]"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input
+              id="inputSearch"
+              type="search"
+              required
+              placeholder="Search issues..."
+            />
+          </label>
+          <button id="btnSearch" class="btn btn-primary">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- btn section -->
+      <section>
+        <div
+          class="container mx-auto mt-10 bg-base-300 border border-gray-300 shadow-sm rounded-md p-4 flex gap-4"
+        >
+          <div class="flex flex-col md:flex-row w-full gap-4">
+            <button
+              id="allBtn"
+              class="btn btn-primary px-10"
+              onclick="setActive(this)"
+            >
+              All
+            </button>
+            <button
+              id="openBtn"
+              class="btn btn-outline btn-primary px-10"
+              onclick="setActive(this)"
+            >
+              Open
+            </button>
+            <button
+              id="closedBtn"
+              class="btn btn-outline btn-primary px-10"
+              onclick="setActive(this)"
+            >
+              Closed
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- issues section -->
+      <section class="container mx-auto">
+        <div
+          class="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto bg-base-300 gap-5 mt-10 p-5 rounded-md shadow-sm"
+        >
+          <!-- left -->
+          <div class="flex items-center gap-2">
+            <img
+              src="./assets/Aperture.png"
+              alt=""
+              class="w-20 bg-gray-300 rounded-full p-3"
+            />
+            <div>
+              <h2 class="text-2xl font-bold">
+                <span id="issuesItems">0</span>: Issues
+              </h2>
+              <p class="text-gray-500">Track and manage your project issues</p>
+            </div>
+          </div>
+          <!-- right -->
+          <div class="flex items-center gap-5">
+            <!-- Open -->
+            <div class="flex gap-3 items-center">
+              <span class="bg-green-500 w-5 h-5 rounded-full"></span>
+              <p class="text-3xl font-medium">Open</p>
+            </div>
+            <!-- Closed -->
+            <div class="flex gap-4 items-center">
+              <p class="bg-fuchsia-500 w-5 h-5 rounded-full"></p>
+              <p class="text-3xl font-medium">Closed</p>
+            </div>
+          </div>
+        </div>
+        <hr class="text-gray-500" />
+      </section>
+
+      <section class="container mx-auto card card-body bg-base-200 shadow-sm">
+        <div
+          id="cardContainer"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
+        >
+          <!-- dynamic added -->
+        </div>
+        <div id="loadingSpiner" class="text-center hidden justify-center py-60">
+          <!-- loading spiner -->
+          <span class="loading loading-dots loading-lg"></span>
+        </div>
+
+        <!-- catagory modal  -->
+        <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+        <dialog id="cardModal" class="modal sm:modal-middle p-5">
+          <div class="modal-box">
+            <div id="detailsCards"></div>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn bg-primary text-white">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
+    </main>
+
+    <!-- script link -->
+    <script src="./script/btnactive.js"></script>
+    <script src="./script/allcard.js"></script>
+  </body>
+</html>
