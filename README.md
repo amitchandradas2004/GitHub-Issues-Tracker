@@ -94,13 +94,13 @@ var, let, এবং const JavaScript এ variable declare করার জন্
 
 var = Function scoped একই variable আবার declare করা যায় value change করা যায়
 
-    var name = "Md Shakibul Islam";
-    var name = "Md Rokibul Islam";
+    var name = "Amit";
+    var name = "Rohim";
     console.log(name);
 
 let = Block scoped একই variable আবার declare করা যায় না value change করা যায়
 
-    let age = 20;
+    let age = 21;
     age = 25;
     console.log(age);
 
@@ -129,8 +129,8 @@ Output:
 Example with object:
 
     const user = {
-    name: "themdshakibul",
-    age: 19
+    name: "amit",
+    age: 21
     };
 
     const newUser = {
@@ -198,18 +198,18 @@ Template literals ব্যবহার করা হয় string এর ভিত
 
 Example:
 
-    const name = "Md Shakibul Islam";
-    const age = 19;
-    const student = "CSE";
+    const name = "Amit";
+    const age = 21;
+    const student = "English";
 
 
-    const message = `My name is ${name} and I am ${age} years old. I am a ${student} Student.`;
+    const message = `My name is ${name} and I am ${age} years old. I am an ${student} Student.`;
 
     console.log(message);
 
 Output:
 
-    My name is Md Shakibul Islam and I am 19 years old. I am a CSE Student.
+    My name is Amit and I am 21 years old. I am an English Student.
 
 ---
 
