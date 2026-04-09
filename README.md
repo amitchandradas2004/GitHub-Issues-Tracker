@@ -1,14 +1,4 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
-
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)
-
-# 📅 No Deadline For 50 marks
-
-# **📅 Deadline For 30 marks:** Any time after 9th March.
-
----
-
-# Assignment-05: GitHub Issues Tracker
+# GitHub Issues Tracker
 
 ### **API Endpoints:**
 
@@ -227,20 +217,3 @@ Output:
 Username: admin
 Password: admin123
 ```
-
----
-
-### Optional:
-
-- No need to show status: Open, Closed styles On modals.
-- No Need to show icon on labels
-- No need to apply styles on Priority
-
----
-
-## 📤 What to submit
-
-- **GitHub Repository Link:**
-- **Live Site Link:**
-
----
